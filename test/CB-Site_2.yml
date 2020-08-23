@@ -1,0 +1,29 @@
+---
+type: cloudgenix template
+version: 1.0
+# Created at 2020-08-23T10:20:12.739564Z
+# by system_100@vishwas_cloudgenix.com
+sites v4.5:
+  CB-Site_2:
+    address:
+    admin_state: disabled
+    description:
+    element_cluster_role: HUB
+    elements v2.3: {}
+    extended_tags:
+    hubclusters v2.0:
+      default-100-15975816442520148:
+        admin_up: true
+        load_alarm_threshold: 90
+        subscription_factor: 0.5
+    location:
+      description:
+      latitude: 0.0
+      longitude: 0.0
+    nat_policysetstack_id:
+    network_policysetstack_id:
+    policy_set_id:
+    priority_policysetstack_id:
+    security_policyset_id:
+    service_binding:
+    tags:

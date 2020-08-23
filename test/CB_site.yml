@@ -1,0 +1,260 @@
+---
+type: cloudgenix template
+version: 1.0
+# Created at 2020-08-23T10:20:13.207885Z
+# by system_100@vishwas_cloudgenix.com
+sites v4.5:
+  CB_site:
+    address:
+      city: Bengaluru
+      country: India
+      post_code:
+      state: Karnataka
+      street:
+      street2:
+    admin_state: active
+    description: Test site
+    element_cluster_role: SPOKE
+    elements v2.3:
+      CB_device:
+        admin_action:
+        allowed_roles:
+        - SPOKE
+        cluster_insertion_mode:
+        cluster_member_id:
+        connected: true
+        deployment_op:
+        description:
+        dnsservices v2.0:
+          cache_config:
+            cache_size: 150
+          description:
+          dns_queries_metadata:
+            add_customer_premises_equipment:
+              identifier_text: ''
+              type: text
+          dnsservice_profile_id: Profile1
+          dnsservicerole_bindings:
+          domains_to_addresses:
+          domains_to_interfaces:
+          element_id: CB_device
+          enabled: true
+          max_concurrent_dns_queries: 100
+          name: CB_dns
+          tags:
+        element_security_zones v2.0: []
+        interfaces v4.9:
+          '12':
+            admin_up: true
+            attached_lan_networks:
+            bound_interfaces:
+            bypass_pair:
+              lan: '2'
+              lan_state_propagation: false
+              use_relay: true
+              wan: '1'
+            description:
+            devicemgmt_policysetstack_id:
+            dhcp_relay:
+            directed_broadcast: false
+            ethernet_port:
+              full_duplex: false
+              speed: 0
+            ipv4_config:
+            mac_address:
+            mtu: 1500
+            nat_address:
+            nat_pools:
+            nat_port: 0
+            nat_zone_id:
+            network_context_id:
+            parent:
+            pppoe_config:
+            scope: local
+            service_link_config:
+            site_wan_interface_ids:
+            sub_interface:
+            tags:
+            type: bypasspair
+            used_for: private-l2
+          '3':
+            admin_up: true
+            attached_lan_networks:
+            bound_interfaces:
+            bypass_pair:
+            description: ''
+            devicemgmt_policysetstack_id:
+            dhcp_relay:
+            directed_broadcast: false
+            ethernet_port:
+              full_duplex: false
+              speed: 0
+            ipv4_config:
+              dhcp_config:
+              dns_v4_config:
+              routes:
+              static_config:
+              type: dhcp
+            mac_address:
+            mtu: 1500
+            nat_address:
+            nat_pools:
+            nat_port: 0
+            nat_zone_id:
+            network_context_id:
+            parent:
+            pppoe_config:
+            scope: local
+            service_link_config:
+            site_wan_interface_ids:
+            sub_interface:
+            tags:
+            type: port
+            used_for: public
+          '4':
+            admin_up: true
+            attached_lan_networks:
+            bound_interfaces:
+            bypass_pair:
+            description: ''
+            devicemgmt_policysetstack_id:
+            dhcp_relay:
+            directed_broadcast: false
+            ethernet_port:
+              full_duplex: false
+              speed: 0
+            ipv4_config:
+              dhcp_config:
+              dns_v4_config:
+              routes:
+              static_config:
+              type: dhcp
+            mac_address:
+            mtu: 1500
+            nat_address:
+            nat_pools:
+            nat_port: 0
+            nat_zone_id:
+            network_context_id:
+            parent:
+            pppoe_config:
+            scope: local
+            service_link_config:
+            site_wan_interface_ids:
+            sub_interface:
+            tags:
+            type: port
+            used_for: public
+          controller 1:
+            admin_up: true
+            attached_lan_networks:
+            bound_interfaces:
+            bypass_pair:
+            description: ''
+            devicemgmt_policysetstack_id:
+            dhcp_relay:
+            directed_broadcast: false
+            ethernet_port:
+              full_duplex: false
+              speed: 0
+            ipv4_config:
+              dhcp_config:
+              dns_v4_config:
+              routes:
+              static_config:
+              type: dhcp
+            mac_address:
+            mtu: 1500
+            nat_address:
+            nat_pools:
+            nat_port: 0
+            nat_zone_id:
+            network_context_id:
+            parent:
+            pppoe_config:
+            scope: local
+            service_link_config:
+            site_wan_interface_ids:
+            sub_interface:
+            tags:
+            type: port
+            used_for: none
+        l3_direct_private_wan_forwarding: false
+        l3_lan_forwarding: false
+        model_name: ion 3000v
+        nat_policysetstack_id:
+        network_policysetstack_id:
+        ntp v2.0:
+        - description: Default NTP template created by super user.
+          name: default
+          ntp_servers:
+          - host: 0.cloudgenix.pool.ntp.org
+            max_poll: 10
+            min_poll: 9
+            version: 4
+          - host: 1.cloudgenix.pool.ntp.org
+            max_poll: 10
+            min_poll: 9
+            version: 4
+          - host: 2.cloudgenix.pool.ntp.org
+            max_poll: 10
+            min_poll: 9
+            version: 4
+          - host: 3.cloudgenix.pool.ntp.org
+            max_poll: 10
+            min_poll: 9
+            version: 4
+          - host: time.nist.gov
+            max_poll: 15
+            min_poll: 13
+            version: 4
+          source_interface_ids:
+          tags:
+        priority_policysetstack_id:
+        role: SPOKE
+        routing:
+          bgp:
+            global_config v2.2:
+              admin_distance: 20
+              adv_interval: 1
+              graceful_restart: false
+              hold_time: 90
+              keepalive_time: 30
+              local_as_num:
+              maximum_paths: 1
+              md5_secret:
+              multi_hop_limit: 1
+              peer_auth_type: none
+              peer_retry_time: 120
+              prefix_adv_type:
+              prefix_adv_type_to_lan: default
+              prefixes_to_adv_to_wan:
+              router_id:
+              stalepath_time: 120
+          static v2.0: []
+        serial_number: fe561042-29d7-8eaa-49df-f714be405779
+        software_version: 5.4.1-a27
+        spoke_ha_config:
+        state: bound
+        tags:
+        tenant_id: '100'
+        toolkit v2.2:
+          account_disable_interval: 5
+          inactive_interval: 15
+          otpkey_version: 1
+          retry_login_count: 5
+          ssh_enabled: true
+          ssh_outbound_enabled: false
+        vpn_to_vpn_forwarding: false
+    extended_tags:
+    location:
+      description:
+      latitude: 12.96990966796875
+      longitude: 77.59796142578125
+    nat_policysetstack_id: Default-NATPolicySetStack
+    network_policysetstack_id: NetworkPolicySetStack
+    policy_set_id:
+    priority_policysetstack_id: PriorityPolicySetStack
+    security_policyset_id:
+    service_binding: Preset Domain
+    tags:
