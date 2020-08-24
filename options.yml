@@ -1,0 +1,3 @@
+---
+delete_resources: true
+declaim_element_on_unassign: true
